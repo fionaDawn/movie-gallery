@@ -2,19 +2,21 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with TailwindCSS as CSS framework. :)
 
-## Available Scripts
+## To run this project
 
 In the project directory, make sure to add environment variable:
-
 ### `REACT_APP_TMDB_API_KEY=<your API key>`
 
-then run,
+then install dependencies by running,
+### `yarn install`
 
+then run,
 ### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+---------------
 
 To launch cypress test runner, run
 ### `yarn e2e:run`
