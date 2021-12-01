@@ -1,9 +1,8 @@
 # Movie Gallery by Fiona
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). :)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with TailwindCSS as CSS framework. :)
 
 ## Available Scripts
-
 
 In the project directory, make sure to add environment variable:
 
@@ -16,10 +15,9 @@ then run,
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+
+To launch cypress test runner, run
 ### `yarn e2e:run`
-
-Launches the cypress test runner.
-
 
 ## Limitations and Assumptions
 - this assignment only displays the first 20 movies and desktop can be supported but images are HUGE!
