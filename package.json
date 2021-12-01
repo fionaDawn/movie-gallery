@@ -18,8 +18,10 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
+    "test": "cypress run",
+    "eject": "react-scripts eject",
+    "cypress:ui": "cypress open",
+    "e2e:run": "start-server-and-test start http://localhost:3000 test"
   },
   "eslintConfig": {
     "extends": [
@@ -40,8 +42,13 @@
     ]
   },
   "devDependencies": {
+    "@cypress/react": "^5.10.3",
+    "@cypress/webpack-dev-server": "^1.7.0",
+    "@testing-library/cypress": "^8.0.2",
     "autoprefixer": "^9",
+    "cypress": "^9.1.0",
     "postcss": "^7",
+    "start-server-and-test": "^1.14.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   }
 }

@@ -1,4 +1,6 @@
 import cn from "classnames";
+import PropTypes from "prop-types";
+
 const Button = ({ children, icon: Icon, variant = 'default', ...rest }) => <button
     {...rest}
     className={cn("items-center px-2 text-white",
@@ -19,5 +21,15 @@ const Button = ({ children, icon: Icon, variant = 'default', ...rest }) => <butt
     </div >
 </button >
 
+Button.propTypes = {
+    chilren: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ]),
+    icon: PropTypes.shape({
+        type: PropTypes.oneOf(['img', 'svg']),
+    }),
+    variant: PropTypes.string
+}
 
 export default Button;

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchMovieById } from "../api/tmdb";
 import { useLocation } from "react-router-dom";
-import Header from "../components/Header";
 import Button from "../components/Button";
 import Trailers from "../components/Trailers";
 
@@ -11,7 +10,6 @@ const Movie = () => {
     useEffect(() => {
         (async () => setInfo(await fetchMovieById(pathname.replace("/movie/", ""))))()
     }, [pathname])
-    console.log(info)
     return info ? (<div className="text-neutral-3 text-sm leading-6">
         <h1 className="bg-neutral-2 text-white font-medium text-xl py-4 px-5">
             {info.original_title}
@@ -23,9 +21,9 @@ const Movie = () => {
                     alt={info.title} />
                 <div className="flex-auto relative ml-4 text-neutral-1">
                     <h1 className="text-xl">{info.release_date.split("-")[0]}</h1>
-                    <body className="text-sm italic leading-6">120 mins</body>
+                    <h2 className="text-sm italic leading-6">120 mins</h2>
                     <div className="absolute bottom-0 w-full">
-                        <body className="text-sm font-bold mb-4">{`${info.vote_average} / 10`}</body>
+                        <h2 className="text-sm font-bold mb-4">{`${info.vote_average} / 10`}</h2>
                         <Button
                             variant="primary">
                             Add to Favorite

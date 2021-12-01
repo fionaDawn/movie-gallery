@@ -7,6 +7,7 @@ const Grid = ({ list }) => {
                 href={`movie/${movie.id}`}
                 key={movie.title}>
                 <img
+                    data-testid="movie-poster"
                     className="w-full"
                     src={`https://image.tmdb.org/t/p/w185${movie.poster_path}`}
                     alt={movie.title} />
